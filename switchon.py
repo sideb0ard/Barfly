@@ -12,10 +12,15 @@ def status(file):
 	onoffv = onoffr.read()
 	print 'OnOff: {0}'.format(onoffv)
 
+def onoff(val):
+	onofff = open(onoff, 'w')
+	
+
 
 if __name__ == '__main__':
 	if len(sys.argv) < 2:
 		print "status or on / off, buddy..."
+		sys.exit(1)
 
 	if sys.argv[1] == 'status':
 		status(file)
