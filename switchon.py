@@ -14,5 +14,8 @@ def status(file):
 
 
 if __name__ == '__main__':
-	if sys.argv
-	status(file)
+	if len(sys.argv) < 2:
+		print "status or on / off, buddy..."
+
+	if sys.argv[1] == 'status':
+		status(file)
