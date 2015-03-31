@@ -1,5 +1,29 @@
 ---
 - user: name=thorsten shell=/bin/bash groups=sudo append=yes
   sudo: yes
+- name: thor bash_profile
+  copy: copy src=bash_profile dest=/home/thorsten/.bash_profile owner"thorsten"
+- name: thor bashrc 
+  copy: copy src=bashrc dest=/home/thorsten/.bashrc owner"thorsten"
+- name: thor vimrc 
+  copy: copy src=vimrc.basic dest=/home/thorsten/.vimrc owner"thorsten" 
+- file: state=directory name=/home/thorsten/.vim/ftplugin owner="thorsten" 
+- name: thor vim ftplugin 
+  copy: copy src=python.vim dest=/home/thorsten/.vim/ftplugin/python.vim owner"thorsten"
+
 - user: name=tack shell=/bin/bash groups=sudo append=yes
+  sudo: yes
+- name: tack bash_profile
+  copy: copy src=bash_profile dest=/home/tack/.bash_profile owner"tack"
+  sudo: yes
+- name: tack bashrc 
+  copy: copy src=bashrc dest=/home/tack/.bashrc owner"tack"
+  sudo: yes
+- name: tack vimrc 
+  copy: copy src=vimrc.basic dest=/home/tack/.vimrc owner"tack" 
+  sudo: yes
+- file: state=directory name=/home/tack/.vim/ftplugin owner="tack" 
+  sudo: yes
+- name: tack vim ftplugin 
+  copy: copy src=python.vim dest=/home/tack/.vim/ftplugin/python.vim owner"tack"
   sudo: yes
