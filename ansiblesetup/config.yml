@@ -1,0 +1,8 @@
+---
+
+- name: Beagle BARF!
+  hosts: beagles
+  remote_user: thorsten
+
+  roles:
+    - beagle

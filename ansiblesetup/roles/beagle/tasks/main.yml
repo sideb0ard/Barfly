@@ -1,0 +1,5 @@
+---
+- user: name=thorsten shell=/bin/bash groups=sudo append=yes
+  sudo: yes
+- user: name=tack shell=/bin/bash groups=sudo append=yes
+  sudo: yes
