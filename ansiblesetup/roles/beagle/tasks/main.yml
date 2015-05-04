@@ -1,6 +1,5 @@
 ---
 - user: name=thorsten shell=/bin/bash groups=sudo append=yes
-  sudo: yes
 - name: thor bash_profile
   copy: copy src=bash_profile dest=/home/thorsten/.bash_profile owner"thorsten"
 - name: thor bashrc 
@@ -12,18 +11,32 @@
   copy: copy src=python.vim dest=/home/thorsten/.vim/ftplugin/python.vim owner"thorsten"
 
 - user: name=tack shell=/bin/bash groups=sudo append=yes
-  sudo: yes
 - name: tack bash_profile
   copy: copy src=bash_profile dest=/home/tack/.bash_profile owner"tack"
-  sudo: yes
 - name: tack bashrc 
   copy: copy src=bashrc dest=/home/tack/.bashrc owner"tack"
-  sudo: yes
 - name: tack vimrc 
   copy: copy src=vimrc.basic dest=/home/tack/.vimrc owner"tack" 
-  sudo: yes
 - file: state=directory name=/home/tack/.vim/ftplugin owner="tack" 
-  sudo: yes
 - name: tack vim ftplugin 
   copy: copy src=python.vim dest=/home/tack/.vim/ftplugin/python.vim owner"tack"
-  sudo: yes
+
+- apt: name=build-essential state=present
+- apt: name=git state=present
+- apt: name=libgtk2.0-dev state=present
+- apt: name=pkg-config state=present
+- apt: name=libavcodec-dev state=present
+- apt: name=libavformat-dev state=present
+- apt: name=libswscale-dev state=present
+- apt: name=python-dev state=present
+- apt: name=python-numpy state=present
+- apt: name=libtbb2 state=present
+- apt: name=libtbb-dev state=present
+- apt: name=libjpeg-dev state=present
+- apt: name=libpng-dev state=present
+- apt: name=libtiff-dev state=present
+- apt: name=libjasper-dev state=present
+- apt: name=libdc1394-22-dev state=present
+- apt: name=htop state=present
+- apt: name=ack-grep state=present
+- apt: name=lsof state=present

@@ -2,7 +2,7 @@
 
 - name: Beagle BARF!
   hosts: beagles
-  remote_user: thorsten
+  remote_user: root
 
   roles:
     - beagle
