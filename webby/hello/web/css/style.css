@@ -1,0 +1,15 @@
+/*
+green: rgb(114, 251, 78);
+yellow: #F9FA61
+*/
+
+body{
+	background-color:rgb(114, 251, 78);
+	font-family:sans-serif;
+}
+
+button{
+	background-color:#F9FA61;
+	border:1px solid #000;
+	border-radius:5px;
+}
