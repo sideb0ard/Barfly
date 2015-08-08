@@ -115,21 +115,33 @@
 
             // CALL a remote procedure every second
             //
-            var x = 0;
-
-            t2 = setInterval(function () {
-
-               session.call('com.barfly.add2', [x, 18]).then(
-                  function (res) {
-                     console.log("add2() result:", res);
-                  },
-                  function (err) {
-                     console.log("add2() error:", err);
-                  }
-               );
-
-               x += 3;
-            }, 1000);
+            //var x = 0;
+            //
+            //t2 = setInterval(function () {
+            //
+            //   session.call('com.barfly.add2', [x, 18]).then(
+            //      function (res) {
+            //         console.log("add2() result:", res);
+            //      },
+            //      function (err) {
+            //         console.log("add2() error:", err);
+            //      }
+            //   );
+            //
+            //   x += 3;
+            //}, 1000);
+			
+			drinky = function(){
+				session.call('com.barfly.drinkmotherfucker', [x, 18]).then(
+				   function (res) {
+				      console.log("drinkmotherfucker() result:", res);
+				   },
+				   function (err) {
+				      console.log("drinkmotherfucker() error:", err);
+				   }
+				);
+				
+			}
          };
 
 
