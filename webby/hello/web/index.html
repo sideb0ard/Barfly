@@ -38,6 +38,9 @@
       <script>
          // the URL of the WAMP Router (Crossbar.io)
          //
+	  	
+		//com.barfly.drinkmotherfucker
+		
          var wsuri;
          if (document.location.origin == "file://") {
             wsuri = "ws://127.0.0.1:8080/ws";
@@ -73,7 +76,7 @@
                var counter = args[0];
                console.log("on_counter() event received with counter " + counter);
             }
-            session.subscribe('com.example.oncounter', on_counter).then(
+            session.subscribe('com.barfly.oncounter', on_counter).then(
                function (sub) {
                   console.log('subscribed to topic');
                },
@@ -87,8 +90,8 @@
             //
             t1 = setInterval(function () {
 
-               session.publish('com.example.onhello', ['Hello from JavaScript (browser)']);
-               console.log("published to topic 'com.example.onhello'");
+               session.publish('com.barfly.onhello', ['Hello from JavaScript (browser)']);
+               console.log("published to topic 'com.barfly.onhello'");
             }, 1000);
 
 
@@ -100,7 +103,7 @@
                console.log("mul2() called with " + x + " and " + y);
                return x * y;
             }
-            session.register('com.example.mul2', mul2).then(
+            session.register('com.barfly.mul2', mul2).then(
                function (reg) {
                   console.log('procedure registered');
                },
@@ -116,7 +119,7 @@
 
             t2 = setInterval(function () {
 
-               session.call('com.example.add2', [x, 18]).then(
+               session.call('com.barfly.add2', [x, 18]).then(
                   function (res) {
                      console.log("add2() result:", res);
                   },
