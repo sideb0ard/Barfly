@@ -4,8 +4,9 @@ yellow: #F9FA61
 */
 
 body{
+	
 	background-color:rgb(114, 251, 78);
-	font-family:sans-serif;
+	font-family: 'Schoolbell', cursive;
 }
 
 button{
