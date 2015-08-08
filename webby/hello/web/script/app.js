@@ -26,8 +26,8 @@ connection.onopen = function(session, details) {
 	console.log("Connected");
 
 	drinky = function() {
+		var resOut = document.getElementById("imgOutput");
 		session.call('com.barfly.drinkmotherfucker', ['drinkmotherfuckerdrinkmotherfuckerdrink']).then(
-			var resOut = document.getElementById("imgOutput");
 			function(res) {
 				resOut.innerHTML = '<img src="/fileoutput/' + res + '"/><figcaption>' + res + '</figcaption>';
 				console.log("drinkmotherfucker() result:", res);
