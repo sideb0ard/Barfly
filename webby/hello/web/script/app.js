@@ -27,13 +27,13 @@ connection.onopen = function(session, details) {
 
 	drinky = function() {
 		session.call('com.barfly.drinkmotherfucker', ['drinkmotherfuckerdrinkmotherfuckerdrink']).then(
+			var resOut = document.getElementById("imgOutput");
 			function(res) {
-				var resOut = document.getElementById("imgOutput");
-
 				resOut.innerHTML = '<img src="/fileoutput/' + res + '"/><figcaption>' + res + '</figcaption>';
 				console.log("drinkmotherfucker() result:", res);
 			},
 			function(err) {
+				resOut.innerHTML = '<img src="http://thebusinessaim.com.ng/wp-content/uploads/2014/07/flesh_flies_mating_brian.jpg"/><figcaption>' + res + '</figcaption>';
 				console.log("drinkmotherfucker() error:", err);
 			}
 		);
