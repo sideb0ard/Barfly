@@ -1,3 +1,4 @@
 Beaglemount/fileoutput/*
 *.jpeg
 .vagrant
+*.pyc
